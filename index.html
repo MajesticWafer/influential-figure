@@ -65,7 +65,7 @@
       <div class="content">
         <h2>The Influential Figure - Who and Why</h2>
         <p>My influential figure is my mother. She has taken care of me my whole life and will always love me. An example of an event of my mom being a positive influence is when I had fallen over on the driveway when I was about 7, with bits of scooter handle foam embedded into the skin right next to my eye. Although it hurt, and when I got stitches it was highly uncomfortable, she always stuck with me and kept my head held up high. My mom positively affects me in so many more ways than just one, no matter the environment and situation.</p>
-        <img src="assets/image1.jpeg" alt="Image 1">
+        <img src="assets/image1.jpeg" alt="Image 1" onclick="openFullscreen(this)">
       </div>
     </div>
 
@@ -73,9 +73,9 @@
       <div class="content">
         <h2>The influential Figure - Graphics</h2>
         <p>Here are some of the many photos of me and my influential figure, mom.</p>
-        <img src="assets/image2.jpeg" alt="Image 2">
-        <img src="assets/image3.jpeg" alt="Image 3">
-        <img src="assets/image4.jpeg" alt="Image 4">
+        <img src="assets/image2.jpeg" alt="Image 2" onclick="openFullscreen(this)">
+        <img src="assets/image3.jpeg" alt="Image 3" onclick="openFullscreen(this)">
+        <img src="assets/image4.jpeg" alt="Image 4" onclick="openFullscreen(this)">
       </div>
     </div>
 
@@ -83,7 +83,7 @@
       <div class="content">
         <h2>The Influential Figure - One Final Moment</h2>
         <p>At times our relation ship is rough, and we can sometimes have opposing opinions and thoughts, my mom is always--<i>and always will be</i>--<i><b>mom</b></i>.</p>
-        <img src="assets/image5.jpeg" alt="Image 5">
+        <img src="assets/image5.jpeg" alt="Image 5" onclick="openFullscreen(this)">
       </div>
     </div>
 
@@ -112,6 +112,17 @@
       });
     });
   });
+</script>
+<script>
+  function openFullscreen(elem) {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+   } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }
 </script>
 
 </body>
