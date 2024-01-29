@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Influential Figure Project</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ebebeb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Hedvig Letters Sans', sans-serif;
+    }
+    .section {
+      height: 65vh;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .section img {
+      width: 25%;
+      height: 25%;
+      top: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+    .tran-1 {
+      transform: scale(85%);
+    }
+    .tran-2 {
+      opacity: 1;
+    }
+    .tran-end {
+      transform: scale(100%);
+    }
+    .container {
+      width: 66.66%;
+      margin: 0 40px;
+      height: 100%;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1 style="margin-left: 35px;">Welcome to Influential Figure</h1>
+      <p style="margin-left: 35px;">Scroll down to explore more</p>
+    </div>
+
+    <div id="section1" class="section">
+      <div class="content">
+        <h2>The Influential Figure - Who and Why</h2>
+        <p>My influential figure is my mother. She has taken care of me my whole life and will always love me. An example of an event of my mom being a positive influence is when I had fallen over on the driveway when I was about 7, with bits of scooter handle foam embedded into the skin right next to my eye. Although it hurt, and when I got stitches it was highly uncomfortable, she always stuck with me and kept my head held up high. My mom positively affects me in so many more ways than just one, no matter the environment and situation.</p>
+        <img src="assets/image1.jpeg" alt="Image 1">
+      </div>
+    </div>
+
+    <div id="section2" class="section">
+      <div class="content">
+        <h2>The influential Figure - Graphics</h2>
+        <p>Here are some of the many photos of me and my influential figure, mom.</p>
+        <img src="assets/image2.jpeg" alt="Image 2">
+        <img src="assets/image3.jpeg" alt="Image 3">
+        <img src="assets/image4.jpeg" alt="Image 4">
+      </div>
+    </div>
+
+    <div id="section3" class="section">
+      <div class="content">
+        <h2>The Influential Figure - One Final Moment</h2>
+        <p>At times our relation ship is rough, and we can sometimes have opposing opinions and thoughts, my mom is always--<i>and always will be</i>--<i><b>mom</b></i>.</p>
+        <img src="assets/image5.jpeg" alt="Image 5">
+      </div>
+    </div>
+
+  <!-- Add more sections as needed -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      var sections = document.querySelectorAll('.section');
+      sections.forEach(function(section) {
+        var positionFromTop = section.getBoundingClientRect().top;
+        var positionFromBottom = section.getBoundingClientRect().bottom;
+        var windowHeight = window.innerHeight;
+        if (positionFromTop < windowHeight / 2 && positionFromBottom > windowHeight / 2) {
+          setTimeout(function() {
+            section.classList.add('tran-1');
+          }, 100);
+
+          setTimeout(function() {
+            section.classList.add('tran-2');
+          }, 100);
+          
+          setTimeout(function() {
+            section.classList.add('tran-end');
+          }, 100);
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
